@@ -1,0 +1,25 @@
+mybatis:
+  # config-location: classpath:mybatis-config.xml
+  configuration:
+    lazy-loading-enabled: true
+    auto-mapping-behavior: full
+    log-impl: org.apache.ibatis.logging.log4j.Log4jImpl
+    map-underscore-to-camel-case: true
+  type-aliases-package:
+  type-handlers-package:
+
+spring:
+  #  profiles:
+  #    active: dev
+
+  #  mvc:
+  #    view:
+  #      prefix: /
+  #      suffix: .jsp
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/bank_custom?useUnicode=true&characterEncoding=utf8&useSSL=true&serverTimezone=UTC
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
